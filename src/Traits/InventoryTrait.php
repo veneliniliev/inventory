@@ -609,7 +609,7 @@ trait InventoryTrait
          * Trim the category name to remove blank spaces, then
          * grab the first 3 letters of the string, and uppercase them
          */
-        $prefix = strtoupper(substr(trim($this->category->name), 0, intval($prefixLength)));
+        $prefix = mb_strtoupper(mb_substr(trim($this->category->name), 0, intval($prefixLength)));
 
         /*
          * We'll make sure the prefix length is greater than zero before we try and
